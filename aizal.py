@@ -12,7 +12,7 @@ from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.style import Style
-from cpmnuker import CPMNuker
+from carparktool import CarParkTool
 
 __ADMIN1__ = "ItzAizal"
 __ADMIN2__   = "Aizal_Lynx"
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?]NHẬP MẬT KHẨU[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] NHẬP Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] ĐANG ĐĂNG NHẬP[/bold cyan]: ", end=None)
-        cpm = CPMNuker(acc_access_key)
+        cpm = CarParkTool(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         login_crack = 0
         if login_response != 0:
